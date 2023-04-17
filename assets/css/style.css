@@ -1,0 +1,2354 @@
+@font-face {
+    font-family: mainFont;
+    src: url(../fonts/Report.ttf);
+}
+html, body{
+    margin: 0;
+    padding: 0;
+    background-color: #f8f6fc;
+    font-family: mainFont;
+    color: #707070;
+    height: 100%;
+}
+.container{
+    padding: 0;
+}
+/*navbar*/
+header #mainNav{
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+header #mainNav #mainNavLogo{
+    padding: 0;
+    margin: 0;
+    z-index: 17;
+}
+header #mainNav #mainNavLogo img{
+    width: 21.5vw;
+    padding: 0;
+}
+header #mainNav #mainNavToggleBtn{
+    padding: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8vw;
+    height: 8vw;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    z-index: 17;
+}
+header #mainNav #mainNavToggleBtn:focus{
+    outline: none;
+}
+header #mainNav #mainNavToggleBtn #toggleBtn{
+    width: 8vw;
+    height: 1.35vw;
+    padding: 0;
+    margin: 0;
+    background: #707070;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+header #mainNav #mainNavToggleBtn #toggleBtn::before,
+header #mainNav #mainNavToggleBtn #toggleBtn::after {
+    content: '';
+    position: absolute;
+    width: 8vw;
+    height: 1.35vw;
+    padding: 0;
+    margin: 0;
+    background:  #707070;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+header #mainNav #mainNavToggleBtn #toggleBtn::before {
+    transform: translateY(-2.7vw);
+}
+header #mainNav #mainNavToggleBtn #toggleBtn::after {
+    transform: translateY(2.7vw);
+}
+/* ANIMATION */
+header #mainNav #mainNavToggleBtn.openNavSmallMedium #toggleBtn {
+    transform: translateX(-50px);
+    background: transparent;
+}
+header #mainNav #mainNavToggleBtn.openNavSmallMedium #toggleBtn::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+header #mainNav #mainNavToggleBtn.openNavSmallMedium #toggleBtn::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+header #mainNav #mainNavLarge{
+    display: none;
+}
+header #mainNav #mainNavSmallMedium{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index:16;
+    top: 0;
+    left: 0;
+    background-color: rgba(243,238,252,0.95);
+    overflow-x: hidden;
+    transition: all .5s ease-in-out;
+}
+header #mainNav #mainNavSmallMedium #mainNavSmallMediumLinks{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    top: 20%;
+}
+header #mainNav #mainNavSmallMedium #mainNavSmallMediumLinks p{
+    font-size: 9.6vw;
+    display: block;
+    transition: all .5s ease-in-out;
+    padding: 0;
+    margin-bottom: 13vw;
+    line-height: 100%;
+}
+header #mainNav #mainNavSmallMedium #mainNavSmallMediumLinks p a{
+    color: #818181;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+header #mainNav #mainNavSmallMedium #mainNavSmallMediumLinks #active{
+    font-size: 12vw;
+    color:#B28CFF;
+}
+/*navbar*/
+/*home-page*/
+main{
+    margin: 0 0 40px 0;
+}
+main #homeMain{
+    padding: 0 20px 0 20px;
+}
+main #homeMainUp{
+    height: 80vh;
+    text-align: center;
+    background-image: linear-gradient(to bottom, white , rgba(255, 255, 255, 0.0));
+    border-radius: 45px 45px 0 0 ;
+    -webkit-box-shadow: 7px 0 30px -6px rgba(0,0,0,0.1);
+    -moz-box-shadow: 7px 0 30px -6px rgba(0,0,0,0.1);
+    box-shadow: 7px 0 30px -6px rgba(0,0,0,0.1);
+    clip-path: inset(-40px -40px 0px -40px);
+}
+main #homeMainUp #homeMainUpContainer{
+    height: 100%;
+    padding: 6vh 25px 0 25px;
+}
+main #homeMainUp #homeMainUpContainer #homeMainUpContentCarousel{
+    height: 60vh;
+    margin-bottom: 10px;
+}
+main #homeMainUp #homeMainUpContainer #homeMainUpFirst, #homeMainUpSecond, #homeMainUpThird{
+    width: 100%;
+    height: 100%;
+}
+main #homeMainUp #homeMainUpContainer #homeMainUpFirst #imgSide img{
+    height: 23vh;
+}
+main #homeMainUp #homeMainUpContainer  #homeMainUpFirst #txtSide{
+    margin-top: 4vh;
+}
+main #homeMainUp #homeMainUpContainer  #homeMainUpFirst #txtSide #homeIntroTitle h1{
+    font-size: 4.0vh;
+    margin: 0;
+}
+main #homeMainUp #homeMainUpContainer #homeMainUpFirst #txtSide #homeIntroTitle p{
+    font-size: 2.7vh;
+    margin: 2vh 0 0 0;
+}
+main #homeMainUp #homeMainUpContainer #homeMainUpFirst #txtSide #homeIntroServices{
+    margin-top: 2.7vh;
+    display: flex;
+    justify-content: space-around;
+}
+main #homeMainUp #homeMainUpContainer #homeMainUpFirst #txtSide #homeIntroServices p{
+    margin:  0 0 0 8px;
+    font-size: 2.0vh;
+}
+main #homeMainUp #homeMainUpContainer #homeMainUpFirst #txtSide #homeIntroServices div{
+    display: flex;
+    align-items: center;
+}
+main #homeMainUp #homeMainUpContainer #homeMainUpFirst #txtSide #homeIntroServices div span{
+    margin:  0 0 3px 0;
+}
+main #homeMainUp #homeMainUpContainer #homeMainUpFirst #txtSide #homeIntroServices div span svg{
+    height: 2.4vh;
+}
+main #homeMainUp #homeMainUpContainer #homeMainUpSecond #imgSide img{
+    height: 23vh;
+}
+main #homeMainUp #homeMainUpContainer #homeMainUpSecond #txtSide p{
+    margin: 4vh 0 0 0;
+    font-size: 2.7vh;
+}
+main #homeMainUp #homeMainUpContainer #homeMainUpThird #imgSide img{
+    height: 23vh;
+}
+main #homeMainUp #homeMainUpContainer #homeMainUpThird #txtSide p{
+    margin: 35px 0 0 0;
+    font-size: 2.7vh;
+}
+main #homeMainUp #homeMainUpContainer #homeMainUpThird #txtSide a {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #B28CFF;
+}
+main #homeMainUp #homeMainUpContainer #homeMainUpThird #txtSide a p{
+    margin: 0 2px 0 0;
+    font-size: 2.7vh;
+}
+main #homeMainUp #homeMainUpContainer #homeMainUpThird #txtSide a svg{
+    width: 1.4vh;
+    transform: rotate(270deg);
+}
+main #homeMainUp #homeMainUpContainer .carousel-indicators li{
+    background-color: #454545;
+    width: 35px;
+    height: 4px;
+    border-radius: 100px;
+    border: 5px solid transparent;
+}
+main #homeMainUp #homeMainUpContainer .carousel-indicators li.active{
+    background-color: #B28CFF;
+}
+main #homeMainUp #homeMainUpContainer #homeMainUpTrigger{
+    transform: rotate(180deg);
+}
+main #homeMainUp #homeMainUpContainer #homeMainUpTrigger #ball{
+    width: 30px;
+    color: #B28CFF;
+    animation: bounce 0.5s infinite alternate;
+    -webkit-animation: bounce 0.5s infinite alternate;
+}
+@keyframes bounce {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-15px);
+    }
+}
+@-webkit-keyframes bounce {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-15px);
+    }
+}
+@-moz-keyframes bounce {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-15px);
+    }
+}
+main #homeMainMiddle{
+    margin: 90px 0 0 0;
+    padding: 0 10px;
+}
+main #homeMainMiddle #titleSide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main #homeMainMiddle #titleSide h1{
+    font-size: 45px;
+    margin: 0;
+}
+main #homeMainMiddle #titleSide hr{
+    margin: 5px 0 40px 0;
+    width: 60%;
+    background: linear-gradient(to right, #72CFFF, #B28CFF);
+    border: 1px solid transparent;
+    border-radius: 7px ;
+    height: 2px;
+}
+/*course card*/
+main #homeMainMiddle #coursesSide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main #homeMainMiddle #coursesSide #courseCard{
+    max-width: 390px;
+    height: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-bottom: 60px;
+    -webkit-box-shadow: 8px 8px 30px rgba(0, 0, 0, .1);
+    -moz-box-shadow: 8px 8px 30px rgba(0, 0, 0, .1);
+    box-shadow: 8px 8px 30px rgba(0, 0, 0, .1);
+    background-color: white ;
+    user-select: none;
+}
+main #homeMainMiddle #coursesSide #courseCard a{
+    color: #818181;
+}
+main #homeMainMiddle #coursesSide #courseCard a:hover{
+    text-decoration: none;
+}
+main #homeMainMiddle #coursesSide #courseCard #courseCardContainer{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardHead #courseCardImage{
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardHead #courseCardImage::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-box-shadow: inset 0 -50px 30px -10px #ffffff;
+    -moz-box-shadow: inset 0 -50px 30px -10px #ffffff;
+    box-shadow: inset 0 -50px 30px -10px #ffffff;
+}
+main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardHead #courseCardImage img{
+    width: 100%;
+}
+main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardHead #courseCardDefaultImage{
+    text-align: center;
+}
+main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardHead #courseCardDefaultImage img{
+    width: 100%;
+}
+main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardHead #courseCardLocation{
+    display: flex;
+    align-items: center;
+    padding-left:  30px;
+    margin: -28px 0 0 0;
+    position: absolute;
+}
+main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardHead #courseCardLocation svg{
+    width: 2.7vh;
+}
+main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardHead #courseCardLocation p{
+    font-size: 3vh;
+    margin: 0 0 0 1.5vh;
+    letter-spacing:1px;
+}
+main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardBody {
+    padding: 3vh 30px 0 30px;
+    margin-bottom: auto;
+}
+main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardBody #courseCardTitle #courseName{
+    font-size: 5.5vh;
+    line-height: 6vh;
+    padding: 0;
+    margin: 0;
+}
+main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardBody #courseCardServices{
+    max-height: 100px;
+    min-height: 60px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 3vh;
+}
+main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardBody #courseCardServices::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-box-shadow: inset 0 -30px 40px -10px #ffffff;
+    -moz-box-shadow: inset 0 -30px 40px -10px #ffffff;
+    box-shadow: inset 0 -30px 40px -10px #ffffff;
+    overflow: hidden;
+}
+main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardBody #courseCardServices::-webkit-scrollbar{
+    display: none;
+}
+main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardBody #courseCardServices div{
+    margin: 0;
+}
+main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardBody #courseCardServices div p{
+    font-size: 2.7vh;
+    border: 1px solid #818181;
+    border-radius: 1.8vh;
+    padding:5px 7px;
+    margin: 0 4px 7px 0;
+    display: inline-block;
+    line-height: 100%;
+}
+main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardFooter{
+    padding: 0 30px 30px 30px;
+    margin-top: 2.5vh;
+    display: flex;
+    justify-content: space-between;
+}
+main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardFooter #courseCardPrice{
+    display: flex;
+    align-items: center;
+}
+main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardFooter #courseCardPrice p{
+    font-size: 4vh;
+    margin: 0 0 -3px 0;
+    letter-spacing: 1px;
+    line-height: 100%;
+}
+main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardFooter #courseCardBtn svg{
+   width:5vh;
+}
+/*course card*/
+/*home-page*/
+/*course-page*/
+main #courseMain {
+    margin-top: 25px;
+    padding: 0 20px;
+}
+main #courseMain #courseMainHead{
+    margin: 0;
+}
+main #courseMain #courseMainHead #titleSide{
+    padding: 0 20px;
+}
+main #courseMain #courseMainHead #titleSide #courseName p{
+    font-size: 12vw;
+    letter-spacing: 1px;
+    margin: 0;
+    line-height: 100%;
+}
+main #courseMain #courseMainHead #titleSide #coursePrice{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+main #courseMain #courseMainHead #titleSide #coursePrice svg{
+    height: 8.5vw;
+}
+main #courseMain #courseMainHead #titleSide #coursePrice p{
+    font-size: 7vw;
+    margin: 0 0 0 10px;
+}
+main #courseMain #courseMainHead #imgSide{
+    overflow: hidden;
+    width: 100%;
+    margin-top: 20px;
+    padding: 0;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-box-shadow: 8px 8px 30px rgba(0, 0, 0, .1);
+    -moz-box-shadow: 8px 8px 30px rgba(0, 0, 0, .1);
+    box-shadow: 8px 8px 30px rgba(0, 0, 0, .1);
+}
+main #courseMain #courseMainHead #imgSide #courseImage{
+    width: 100%;
+    height: 100%;
+}
+main #courseMain #courseMainHead #imgSide #courseImage img{
+    width:100%;
+    margin: 0;
+    padding: 0;
+}
+main #courseMain #courseMainHead #imgSide #courseDefaultImage img{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+main #courseMain #courseMainBody{
+    margin: 30px 0 0 0;
+}
+main #courseMain #courseMainBody #courseMainAbout{
+    padding: 0;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseMainAboutFirstContainer{
+    background-color: #F8F6FC;
+    border-radius: 23px;
+    padding: 0;
+    -webkit-box-shadow: 8px 8px 30px 3px rgba(0, 0, 0, .1);
+    -moz-box-shadow: 8px 8px 30px 3px rgba(0, 0, 0, .1);
+    box-shadow: 8px 8px 30px 3px rgba(0, 0, 0, .1);
+}
+main #courseMain #courseMainBody #courseMainAbout #courseMainAboutSecondContainer{
+    padding: 25px;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseCity{
+    display: flex;
+    align-items: center;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseCity svg{
+    width: 5.5vw;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseCity p{
+    font-size: 6vw;
+    margin: 0 0 0 10px;
+    letter-spacing: 1px;
+    line-height: 100%;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseLocation{
+    height: 37vw;
+    width: 100%;
+    margin-top: 12px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-image: url("../images/map.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    -webkit-box-shadow: 8px 8px 30px rgba(0, 0, 0, .1);
+    -moz-box-shadow: 8px 8px 30px rgba(0, 0, 0, .1);
+    box-shadow: 8px 8px 30px rgba(0, 0, 0, .1);
+}
+main #courseMain #courseMainBody #courseMainAbout #courseLocation ::-webkit-scrollbar{
+    display: none;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseLocation #courseLocationContainer {
+    height: 100%;
+    width: 100%;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseLocation #courseLocationContainer #courseLocationContainerBox{
+    padding:  15px 15px 8px 15px;
+    color: transparent;
+    background: transparent;
+    overflow: overlay;
+    height: 100%;
+    width: 100%;
+    -moz-box-shadow: inset 0 -10px 20px -10px #000000;
+    -webkit-box-shadow: inset 0 -10px 20px -10px #000000;
+    box-shadow: inset 0 -10px 20px -10px #000000;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseLocation #courseLocationContainer div{
+    background-color: #414042;
+    border-radius: 12px;
+    margin-bottom: 7px;
+    -webkit-box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 8px 8px 15px 2px rgba(0, 0, 0, 0.15);
+}
+main #courseMain #courseMainBody #courseMainAbout #courseLocation #courseLocationContainer div a{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    color: #87A8FF;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseLocation #courseLocationContainer div a:hover {
+    text-decoration: none;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseLocation #courseLocationContainer div a svg{
+    width: 3.5vw;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseLocation #courseLocationContainer div a p{
+    font-size: 4vw;
+    margin: 0;
+    padding-left: 10px;
+    line-height: 120%;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseNumber{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseNumber svg{
+    width: 5.5vw;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseNumber #courseNumbers{
+    margin-left: 10px;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseNumber #courseNumbers #numbersDropdownTrigger{
+    display: flex;
+    align-items: flex-end;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseNumber #courseNumbers #numbersDropdownTrigger #numberContainer{
+    display: flex;
+    flex-direction: column;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseNumber #courseNumbers #numbersDropdownTrigger #numberContainer #numberLocation{
+    margin: 0 0 10px 0;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseNumber #courseNumbers #numbersDropdownTrigger #numberContainer #numberLocation p{
+    color: #B28CFF;
+    font-size: 4.8vw;
+    margin: 0;
+    line-height: 100%;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseNumber #courseNumbers #numbersDropdownTrigger #numberContainer #number{
+    margin: 0;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseNumber #courseNumbers #numbersDropdownTrigger #numberContainer #number p{
+    color: #707070;
+    font-size: 6vw;
+    margin: 0;
+    letter-spacing: 1px;
+    line-height: 100%;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseNumber #courseNumbers #numbersDropdownTrigger #dropdownNumbersBtn{
+    margin:0 0 0 15px;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseNumber #courseNumbers #numbersDropdownTrigger #dropdownNumbersBtn svg{
+    width: 6vw;
+    margin: 0;
+    padding: 0;
+    color: #B28CFF;
+    transition: all .5s ease-in-out;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseNumber #courseNumbers .show #dropdownNumbersBtn svg{
+    transform: rotate(-180deg);
+}
+main #courseMain #courseMainBody #courseMainAbout #courseNumber #courseNumbers #numbersDropdownMenu{
+    background-color: #B28CFF;
+    color: white;
+    border-radius: 18px;
+    padding: 0;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseNumber #courseNumbers #numbersDropdownMenu #numbersDropdownMenuContainer{
+    padding: 15px 15px 0 15px;
+    width: 100%;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseNumber #courseNumbers #numbersDropdownMenu #numbersDropdownMenuContainer #numberLocation{
+    font-size: 5.8vw;
+    margin: 0;
+    letter-spacing: 1px;
+    line-height: 100%;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseNumber #courseNumbers #numbersDropdownMenu #numbersDropdownMenuContainer #number{
+    font-size: 5.7vw;
+    margin: 8px 0 15px 0;
+    letter-spacing: 2px;
+    line-height: 100%;
+    white-space: nowrap;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseSchedule{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseSchedule svg{
+    width: 5.5vw;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseSchedule #courseSchedules{
+    margin-left: 10px;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseSchedule #courseSchedules #scheduleDropdownTrigger{
+    display: flex;
+    align-items: center;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseSchedule #courseSchedules #scheduleDropdownTrigger div p{
+    font-size: 6vw;
+    margin: 2px 0 0 0;
+    line-height: 100%;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseSchedule #courseSchedules #scheduleDropdownTrigger svg{
+    width: 6vw;
+    margin:0 0 0 15px;
+    color: #B28CFF;
+    transition: all .5s ease-in-out;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseSchedule #courseSchedules .show svg{
+    transform: rotate(-180deg);
+}
+main #courseMain #courseMainBody #courseMainAbout #courseSchedule #courseSchedules #schedulesDropdownMenu{
+    background-color: #B28CFF;
+    color: white;
+    border-radius: 18px;
+    padding: 0;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseSchedule #courseSchedules #schedulesDropdownMenu #schedulesDropdownMenuContainer{
+    padding: 15px 15px 0 15px;
+    display: flex;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseSchedule #courseSchedules #schedulesDropdownMenu #schedulesDropdownMenuContainer #days{
+    margin-right: 20px;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseSchedule #courseSchedules #schedulesDropdownMenu #schedulesDropdownMenuContainer #days p{
+    font-size: 5.8vw;
+    letter-spacing: 1px;
+    line-height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin:0 0 20px 0;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseSchedule #courseSchedules #schedulesDropdownMenu #schedulesDropdownMenuContainer #schedules p{
+    font-size: 5.8vw;
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    margin:0 0 20px 0;
+    line-height: 100%;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseEmail{
+    margin-top: 30px;
+    display: flex;
+    text-align: center;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseEmail svg{
+    width: 5.5vw;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseEmail p{
+    font-size: 5.4vw;
+    margin: 0 0 0 10px;
+    letter-spacing: 1px;
+    line-height: 100%;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseWebsite{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseWebsite svg{
+    width: 5.5vw;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseWebsite p{
+    font-size: 6vw;
+    margin: 0 0 0 10px;
+    line-height: 100%;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseWebsite p a{
+    color: #87A8FF;
+    letter-spacing: 1px;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseWebsite p:hover a {
+    text-decoration: underline;
+    text-underline: #87A8FF;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseFacebook{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseFacebook svg{
+    width: 5.5vw;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseFacebook p{
+    font-size: 6vw;
+    margin: 0 0 0 10px;
+    line-height: 100%;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseFacebook p a{
+    color: #87A8FF;
+    letter-spacing: 1px;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseFacebook p:hover a {
+    text-decoration: underline;
+    text-underline: #87A8FF;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseInstagram{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseInstagram svg{
+    width: 5.5vw;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseInstagram p{
+    font-size: 6vw;
+    margin: 0 0 0 10px;
+    line-height: 100%;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseInstagram p a {
+    color: #87A8FF;
+    letter-spacing: 1px;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseInstagram p:hover a{
+    text-decoration: underline;
+    text-underline: #87A8FF;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseInfo{
+    margin-top: 26px;
+    display: flex;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseInfo svg{
+    width: 5.5vw;
+    margin-top: 0.8vw;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseInfo p{
+    font-size: 5.5vw;
+    max-width: 67vw;
+    line-height: 140%;
+    margin-left: 10px;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+}
+main #courseMain #courseMainBody #courseMainAbout #courseInfo .readmore.less {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+main #courseMain #courseMainBody #courseMainContent{
+    padding: 0;
+    margin-top: 30px;
+}
+main #courseMain #courseMainBody #courseMainContent #contentTitle{
+    background-color: #F8F6FC;
+    border-radius: 23px;
+    -webkit-box-shadow: 8px 8px 30px rgba(0, 0, 0, .1);
+    -moz-box-shadow: 8px 8px 30px rgba(0, 0, 0, .1);
+    box-shadow: 8px 8px 30px rgba(0, 0, 0, .1);
+}
+main #courseMain #courseMainBody #courseMainContent #contentTitle #contentTitleContainer{
+    padding: 25px;
+}
+main #courseMain #courseMainBody #courseMainContent #contentTitle #contentTitleContainer p{
+    font-size: 7.5vw;
+    margin: 0;
+    line-height: 100%;
+    letter-spacing: 1px;
+}
+main #courseMain #courseMainBody #courseMainContent #contentBody{
+    margin: 0;
+}
+main #courseMain #courseMainBody #courseMainContent #contentBody #courseService{
+    padding: 0;
+    margin-top: 20px;
+    background-color: #F8F6FC;
+    border-radius: 23px;
+    -webkit-box-shadow: 8px 8px 30px rgba(0, 0, 0, .1);
+    -moz-box-shadow: 8px 8px 30px rgba(0, 0, 0, .1);
+    box-shadow: 8px 8px 30px rgba(0, 0, 0, .1);
+}
+main #courseMain #courseMainBody #courseMainContent #contentBody #courseService #courseServiceContainer{
+    padding: 25px 25px;
+}
+main #courseMain #courseMainBody #courseMainContent #contentBody #courseService #courseServiceContainer svg{
+    width: 13vw;
+}
+main #courseMain #courseMainBody #courseMainContent #contentBody #courseService #courseServiceContainer p{
+    font-size: 9.5vw;
+    line-height: 100%;
+    margin: 15px 0 0 0;
+    letter-spacing: 1px;
+}
+main #courseMain #courseMainBody #courseMainContent #contentBody #courseService:nth-child(1) #courseServiceContainer svg,
+main #courseMain #courseMainBody #courseMainContent #contentBody #courseService:nth-child(7) #courseServiceContainer svg{
+    color: #87A8FF;
+}
+main #courseMain #courseMainBody #courseMainContent #contentBody #courseService:nth-child(2) #courseServiceContainer svg,
+main #courseMain #courseMainBody #courseMainContent #contentBody #courseService:nth-child(8) #courseServiceContainer svg{
+    color: #FE6B86;
+}
+main #courseMain #courseMainBody #courseMainContent #contentBody #courseService:nth-child(3) #courseServiceContainer svg,
+main #courseMain #courseMainBody #courseMainContent #contentBody #courseService:nth-child(9) #courseServiceContainer svg{
+    color: #7E5DED;
+}
+main #courseMain #courseMainBody #courseMainContent #contentBody #courseService:nth-child(4) #courseServiceContainer svg,
+main #courseMain #courseMainBody #courseMainContent #contentBody #courseService:nth-child(10) #courseServiceContainer svg{
+    color: #45EC9C;
+}
+main #courseMain #courseMainBody #courseMainContent #contentBody #courseService:nth-child(5) #courseServiceContainer svg,
+main #courseMain #courseMainBody #courseMainContent #contentBody #courseService:nth-child(11) #courseServiceContainer svg{
+    color: #63B4FC;
+}
+main #courseMain #courseMainBody #courseMainContent #contentBody #courseService:nth-child(6) #courseServiceContainer svg,
+main #courseMain #courseMainBody #courseMainContent #contentBody #courseService:nth-child(12) #courseServiceContainer svg{
+    color: #FF8F54;
+}
+/*course-page*/
+/*contact-page*/
+#contactMain{
+    text-align: center;
+    padding: 0 20px 0 20px;
+}
+#contactMain #contactMainUp{
+    background-color: white;
+    border-radius: 50px;
+    -webkit-box-shadow: 8px 8px 30px rgba(0, 0, 0, .1);
+    -moz-box-shadow: 8px 8px 30px rgba(0, 0, 0, .1);
+    box-shadow: 8px 8px 30px rgba(0, 0, 0, .1);
+}
+#contactMain #contactMainUp #contactMainUpContainer{
+    padding: 25px;
+    margin: 0;
+}
+#contactMain #contactMainUp #contactMainUpContainer #txtSide{
+    padding-top: 20px;
+}
+#contactMain #contactMainUp #contactMainUpContainer #txtSide p{
+    font-size: 22px;
+}
+#contactMain #contactMainUp #contactMainUpContainer #imgSide{
+    margin: 20px 0 20px 0;
+    padding: 0;
+}
+#contactMain #contactMainUp #contactMainUpContainer #imgSide img{
+    width: 80%;
+}
+#contactMain #contactMainMiddle{
+    background-image: linear-gradient(to bottom, white , rgba(255, 255, 255, 0.0));
+    border-radius: 50px 50px 0 0 ;
+    margin: 30px 0 0 0;
+    -webkit-box-shadow: 0 -10px 20px -6px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 -10px 20px -6px rgba(0,0,0,0.1);
+    box-shadow: 0 -10px 20px -6px rgba(0,0,0,0.1);
+    clip-path: inset(-20px -20px 0px -20px);
+
+}
+#contactMain #contactMainMiddle #contactMainMiddleContainer{
+    padding: 60px 0 0 0;
+    margin: 0;
+}
+#contactMain #contactMainMiddle #contactMainMiddleContainer div{
+    padding: 0 0 20px 0;
+}
+#contactMain #contactMainMiddle #contactMainMiddleContainer div a:hover {
+    color:#B28CFF;
+    text-decoration: underline;
+    text-decoration-thickness:3px;
+}
+#contactMain #contactMainMiddle #contactMainMiddleContainer div a:hover p{
+    color:#B28CFF;
+}
+#contactMain #contactMainMiddle #contactMainMiddleContainer #contactEmail a:hover{
+    text-decoration: none;
+}
+#contactMain #contactMainMiddle #contactMainMiddleContainer #contactEmail a:hover p{
+    color: #818181 ;
+}
+#contactMain #contactMainMiddle #contactMainMiddleContainer div a p{
+    color: #818181 ;
+    font-size: 22px;
+}
+#contactMain #contactMainMiddle #contactMainMiddleContainer div a span svg{
+    color:#B28CFF;
+    padding-bottom: 20px;
+    width: 50px;
+}
+#contactMain #contactMainMiddle #contactMainMiddleContainer #contactEmail a #contactEmailIcon svg{
+    padding-top: 14px;
+    padding-bottom:24px ;
+}
+/*contact-page*/
+/*footer*/
+footer{
+    background-color: #5E4C82;
+    color: white;
+}
+footer #footerMain a{
+    color: white;
+}
+footer #footerMain #footerMainEmail{
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer #footerMain #footerMainEmail svg{
+    width: 28px;
+    margin-right: 10px;
+}
+footer #footerMain #footerMainEmail p{
+    font-size: 20px;
+    margin: 0;
+}
+footer #footerMain #footerMainSocialMedia{
+    padding: 25px 0 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer #footerMain #footerMainSocialMedia svg{
+    width: 28px;
+    margin: 0 10px;
+}
+/*footer*/
+/*404*/
+#main404{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#main404Container{
+    margin: 0 auto;
+    position: absolute;
+    top:35%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+#main404 #main404Svg{
+    display: flex;
+    justify-content: center;
+}
+#main404 #main404Svg svg{
+    width: 23vh;
+    display: block;
+}
+#main404 #main404Tittle{
+    text-align: center;
+    margin: 1vh 0 0 0;
+}
+#main404 #main404Tittle h1{
+    font-size: 8vw;
+    color: #707070;
+    margin: 0;
+    padding: 0;
+    line-height: 100%;
+    letter-spacing: 2px;
+    font-weight: normal;
+}
+#main404 #main404Link{
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+}
+#main404 #main404Link p{
+    color: #B28CFF;
+    font-size: 7vw;
+    margin: 0;
+    padding: 0;
+    line-height: 100%;
+}
+#main404 #main404Link a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+#main404 #main404Link p:hover {
+    text-decoration: underline;
+}
+#main404 #main404Link svg{
+    width: 5vw;
+    color: #B28CFF;
+    transform: rotate(270deg);
+}
+/*404*/
+@media only screen and (min-width: 768px) {
+    /*navbar*/
+    header #mainNav{
+        padding: 30px 30px;
+    }
+    header #mainNav #mainNavLogo img{
+        width: 95px;
+    }
+    header #mainNav #mainNavToggleBtn{
+        width: 40px;
+        height: 40px;
+    }
+    header #mainNav #mainNavToggleBtn #toggleBtn{
+        width: 40px;
+        height: 6px;
+    }
+    header #mainNav #mainNavToggleBtn #toggleBtn::before,
+    header #mainNav #mainNavToggleBtn #toggleBtn::after {
+        width: 40px;
+        height: 6px;
+    }
+    header #mainNav #mainNavToggleBtn #toggleBtn::before {
+        transform: translateY(-13px);
+    }
+    header #mainNav #mainNavToggleBtn #toggleBtn::after {
+        transform: translateY(13px);
+    }
+    header #mainNav #mainNavSmallMedium #mainNavSmallMediumLinks p{
+        font-size: 40px;
+        margin-bottom: 70px;
+    }
+    header #mainNav #mainNavSmallMedium #mainNavSmallMediumLinks #active{
+        font-size: 50px;
+    }
+    /*navbar*/
+    /*home-page*/
+    main{
+        padding-bottom: 140px;
+        margin: 0;
+    }
+    main #homeMain{
+        padding: 0 30px;
+    }
+    main #homeMainUp #homeMainUpContainer{
+        height: 100%;
+        padding: 50px 30px 0 30px;
+    }
+    main #homeMainUp #homeMainUpContainer #homeMainUpSecond #txtSide,
+    main #homeMainUp #homeMainUpContainer #homeMainUpThird #txtSide{
+        padding: 0 35px;
+    }
+    main #homeMainUp #homeMainUpContainer .carousel-indicators{
+        margin-bottom: 35px;
+    }
+    main #homeMainUp #homeMainUpContainer .carousel-indicators li{
+        width: 45px;
+        height: 5px;
+        margin: 0 5px;
+        border: 6px solid transparent;
+    }
+    main #homeMainUp #homeMainUpContainer #homeMainUpTrigger #ball {
+        width: 35px;
+    }
+    main #homeMainMiddle{
+        padding: 0;
+    }
+    main #homeMainMiddle #titleSide hr{
+        margin: 15px 0 55px 0;
+        width: 45%;
+        height: 3px;
+    }
+    /*course card*/
+    main #homeMainMiddle #coursesSide{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+        justify-items: center;
+        grid-gap:50px;
+    }
+    main #homeMainMiddle #coursesSide #courseCard{
+        width: 390px;
+        height: 100%;
+        border-radius: 30px;
+        overflow: hidden;
+        margin-bottom: 0;
+        background-color: white ;
+    }
+    main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardHead #courseCardLocation{
+        padding-left:  35px;
+    }
+    main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardHead #courseCardLocation svg{
+        width: 25px;
+    }
+    main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardHead #courseCardLocation p{
+        font-size: 25px;
+    }
+    main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardBody {
+        padding: 30px 35px 0 35px;
+        margin-bottom: auto;
+    }
+    main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardBody #courseCardTitle #courseName{
+        font-size: 50px;
+        line-height: 50px;
+    }
+    main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardBody #courseCardServices{
+        max-height: 100px;
+        min-height: 60px;
+        overflow: hidden;
+        position: relative;
+        margin-top: 30px;
+    }
+    main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardBody #courseCardServices div p{
+        font-size: 23px;
+        border-radius: 14px;
+        margin: 0 5px 8px 0;
+    }
+    main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardFooter{
+        padding: 0 35px 35px 35px;
+        margin-top: 24px;
+    }
+    main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardFooter #courseCardPrice{
+        display: flex;
+        align-items: center;
+    }
+    main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardFooter #courseCardPrice p{
+        font-size: 38px;
+    }
+    main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardFooter #courseCardBtn svg{
+        width:43px;
+    }
+    /*course card*/
+    /*home-page*/
+    /*course-page*/
+    main #courseMain #courseMainHead #titleSide{
+        padding: 0 30px;
+    }
+    main #courseMain #courseMainHead #titleSide #courseName p{
+        font-size: 60px;
+        font-weight: normal;
+    }
+    main #courseMain #courseMainHead #titleSide #coursePrice{
+        margin-top: 20px;
+    }
+    main #courseMain #courseMainHead #titleSide #coursePrice svg{
+        height: 40px;
+    }
+    main #courseMain #courseMainHead #titleSide #coursePrice p{
+        font-size: 33px;
+        margin: 0 0 0 15px;
+        font-weight: normal;
+    }
+    main #courseMain #courseMainBody #courseMainAbout{
+        padding: 0 15px 0 0 ;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseCity svg{
+        width: 23px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseCity p{
+        font-size: 25px;
+        margin: 0 0 0 10px;
+        font-weight: normal;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseLocation{
+        height: 160px;
+        margin-top: 15px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseLocation #courseLocationContainer div a svg{
+        width: 15px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseLocation #courseLocationContainer div a p{
+        font-size: 17px;
+        font-weight: normal;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseNumber{
+        margin-top: 30px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseNumber svg{
+        width: 23px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseNumber #courseNumbers{
+        margin-left: 10px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseNumber #courseNumbers #numbersDropdownTrigger #numberContainer #numberLocation p{
+        font-size: 20px;
+        font-weight: normal;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseNumber #courseNumbers #numbersDropdownTrigger #numberContainer #number p{
+        font-size: 25px;
+        font-weight: normal;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseNumber #courseNumbers #numbersDropdownTrigger #dropdownNumbersBtn svg{
+        width: 25px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseNumber #courseNumbers #numbersDropdownMenu #numbersDropdownMenuContainer #numberLocation{
+        font-size: 23px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseNumber #courseNumbers #numbersDropdownMenu #numbersDropdownMenuContainer #number{
+        font-size: 22px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseSchedule{
+        margin-top: 30px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseSchedule svg{
+        width: 23px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseSchedule #courseSchedules #scheduleDropdownTrigger div p{
+        font-size: 25px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseSchedule #courseSchedules #scheduleDropdownTrigger svg{
+        width: 25px;
+        margin:0 0 0 15px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseSchedule #courseSchedules #schedulesDropdownMenu #schedulesDropdownMenuContainer{
+        padding: 15px 15px 0 15px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseSchedule #courseSchedules #schedulesDropdownMenu #schedulesDropdownMenuContainer #days{
+        margin-right: 10px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseSchedule #courseSchedules #schedulesDropdownMenu #schedulesDropdownMenuContainer #days p{
+        font-size: 23px;
+        font-weight: normal;
+        margin:0 0 15px 0;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseSchedule #courseSchedules #schedulesDropdownMenu #schedulesDropdownMenuContainer #schedules p{
+        font-size: 23px;
+        font-weight: normal;
+        margin:0 0 15px 0;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseEmail{
+        margin-top: 30px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseEmail svg{
+        width: 23px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseEmail p{
+        font-size: 20px;
+        font-weight: normal;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseWebsite{
+        margin-top: 30px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseWebsite svg{
+        width: 23px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseWebsite p{
+        font-size: 25px;
+        font-weight: normal;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseFacebook{
+        margin-top: 30px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseFacebook svg{
+        width: 23px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseFacebook p{
+        font-size: 25px;
+        font-weight: normal;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseInstagram{
+        margin-top: 30px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseInstagram svg{
+        width: 23px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseInstagram p{
+        font-size: 25px;
+        font-weight: normal;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseInfo{
+        margin-top: 25px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseInfo svg{
+        width: 23px;
+        margin-top: 0;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseInfo p{
+        font-size: 20px;
+        font-weight: normal;
+        max-width: 245px;
+        letter-spacing: 1px;
+        line-height: 130%;
+    }
+    main #courseMain #courseMainBody #courseMainContent{
+        padding: 0 0 0 15px;
+        margin: 0;
+    }
+    main #courseMain #courseMainBody #courseMainContent #contentTitle #contentTitleContainer p{
+        font-size: 30px;
+    }
+    main #courseMain #courseMainBody #courseMainContent #contentBody #courseService #courseServiceContainer svg{
+        width: 50px;
+    }
+    main #courseMain #courseMainBody #courseMainContent #contentBody #courseService #courseServiceContainer p{
+        font-size: 40px;
+    }
+    /*course-page*/
+    /*contact-page*/
+    #contactMain #contactMainUp{
+        border-radius: 40px ;
+    }
+    #contactMain #contactMainUp #contactMainUpContainer{
+        padding: 70px;
+    }
+    #contactMain #contactMainUp #contactMainUpContainer #txtSide{
+        padding-top: 0;
+    }
+    #contactMain #contactMainUp #contactMainUpContainer #txtSide p{
+        font-size:25px;
+    }
+    #contactMain #contactMainUp #contactMainUpContainer #imgSide{
+        padding: 20px 0 0 0;
+    }
+    #contactMain #contactMainUp #contactMainUpContainer #imgSide img{
+        width: 60%;
+    }
+    #contactMain #contactMainMiddle{
+        background-image: none;
+        margin: 20px 10px 10px 10px;
+        box-shadow: none;
+    }
+    #contactMain #contactMainMiddle #contactMainMiddleContainer{
+        padding: 0;
+        margin: 0 ;
+    }
+    #contactMain #contactMainMiddle #contactMainMiddleContainer div{
+        margin:0;
+        padding: 0;
+    }
+    #contactMain #contactMainMiddle #contactMainMiddleContainer div a p{
+        font-size: 25px;
+    }
+    #contactMain #contactMainMiddle #contactMainMiddleContainer div #contactEmailContainer{
+        padding-bottom: 0;
+        margin: 0 5px;
+        background-image: linear-gradient(to bottom, white , rgba(255, 255, 255, 0.0));
+        border-radius: 40px 40px 0 0 ;
+        -webkit-box-shadow: 0 -10px 20px -6px rgba(0,0,0,0.1);
+        -moz-box-shadow: 0 -10px 20px -6px rgba(0,0,0,0.1);
+        box-shadow: 0 -10px 20px -6px rgba(0,0,0,0.1);
+        clip-path: inset(-20px -20px 0px -20px);
+    }
+    #contactMain #contactMainMiddle #contactMainMiddleContainer div #contactFacebookContainer{
+        padding-bottom: 0;
+        margin: 0 5px;
+        background-image: linear-gradient(to bottom, white , rgba(255, 255, 255, 0.0));
+        border-radius: 40px 40px 0 0 ;
+        -webkit-box-shadow: 0 -10px 20px -6px rgba(0,0,0,0.1);
+        -moz-box-shadow: 0 -10px 20px -6px rgba(0,0,0,0.1);
+        box-shadow: 0 -10px 20px -6px rgba(0,0,0,0.1);
+        clip-path: inset(-20px -20px 0px -20px);
+    }
+    #contactMain #contactMainMiddle #contactMainMiddleContainer div #contactInstagramContainer{
+        padding-bottom: 0;
+        margin: 0 5px;
+        background-image: linear-gradient(to bottom, white , rgba(255, 255, 255, 0.0));
+        border-radius: 40px 40px 0 0 ;
+        -webkit-box-shadow: 0 -10px 20px -6px rgba(0,0,0,0.1);
+        -moz-box-shadow: 0 -10px 20px -6px rgba(0,0,0,0.1);
+        box-shadow: 0 -10px 20px -6px rgba(0,0,0,0.1);
+        clip-path: inset(-20px -20px 0px -20px);
+    }
+    #contactMain #contactMainMiddle #contactMainMiddleContainer div div div{
+        padding:60px 0 40px 0;
+    }
+    /*contact-page*/
+    /*footer*/
+    footer #footerMain #footerMainContainer{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 40px;
+    }
+    footer #footerMain #footerMainEmail{
+        padding-top: 0;
+    }
+    footer #footerMain #footerMainEmail svg{
+        width: 33px;
+        margin-right: 10px;
+    }
+    footer #footerMain #footerMainEmail p{
+        font-size: 25px;
+    }
+    footer #footerMain #footerMainSocialMedia svg{
+        width: 33px;
+        margin: 0 10px;
+    }
+    /*footer*/
+    /*404*/
+    #main404 #main404Svg svg{
+        width: 26vh;
+    }
+    #main404 #main404Tittle{
+        margin: 5vh 0 0 0;
+    }
+    #main404 #main404Tittle h1{
+        font-size: 5vw;
+    }
+    #main404 #main404Link p{
+        font-size: 5vw;
+    }
+    #main404 #main404Link svg{
+        width:3.5vw;
+    }
+    /*404*/
+}
+@media only screen and (min-width: 992px) {
+    .container{
+        max-width: 992px;
+    }
+    /*navbar*/
+    header #mainNav{
+        padding: 20px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    header #mainNav #mainNavLogo img{
+        width: 100px;
+        transition: all .2s ease-in-out;
+    }
+    header #mainNav #mainNavLogo img:hover{
+        transform: scale(1.1);
+    }
+    header #mainNav #mainNavToggleBtn{
+        display: none;
+    }
+    header #mainNav #mainNavSmallMedium{
+        display: none;
+    }
+    header #mainNav #mainNavLarge{
+        display: block;
+    }
+    header #mainNav #mainNavLarge #mainNavLargeLinks{
+        display: flex;
+        align-items: center;
+    }
+    header #mainNav #mainNavLarge #mainNavLargeLinks p{
+        margin: 0 0 0 55px;
+        padding: 0;
+        line-height: 100%;
+        transition: all .2s ease-in-out;
+        letter-spacing: 1px;
+    }
+    header #mainNav #mainNavLarge #mainNavLargeLinks p:hover{
+        transform: scale(1.1);
+    }
+    header #mainNav #mainNavLarge #mainNavLargeLinks p a{
+        margin: 0;
+        padding: 0;
+        color: #707070;
+        font-weight: normal;
+        font-size: 28px;
+    }
+    header #mainNav #mainNavLarge #mainNavLargeLinks p a:hover{
+        text-decoration: none;
+        color: #B28CFF;
+    }
+    header #mainNav #mainNavLarge #mainNavLargeLinks #active{
+        font-size: 32px;
+        color: #B28CFF;
+    }
+    /*navbar*/
+    /*home-page*/
+    main #homeMain{
+        margin-top: 20px;
+        padding: 0;
+    }
+    main #homeMainUp {
+        text-align: left;
+        height: 530px;
+    }
+    main #homeMainUp #homeMainUpContainer{
+        height: 100%;
+        padding: 100px 120px 0 120px;
+        display: flex;
+        align-items: stretch;
+    }
+    main #homeMainUp #homeMainUpContainer #homeMainUpContentCarousel{
+        height: 320px;
+        margin-bottom: 15px;
+    }
+    main #homeMainUp #homeMainUpContainer #homeMainUpFirst, #homeMainUpSecond, #homeMainUpThird{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    main #homeMainUp #homeMainUpContainer #homeMainUpFirst #imgSide{
+        text-align: center;
+    }
+    main #homeMainUp #homeMainUpContainer #homeMainUpFirst #imgSide img{
+        height: 230px;
+    }
+    main #homeMainUp #homeMainUpContainer  #homeMainUpFirst #txtSide{
+        margin: 0 75px 0 0 ;
+        width: 60%;
+    }
+    main #homeMainUp #homeMainUpContainer  #homeMainUpFirst #txtSide #homeIntroTitle h1{
+        font-size: 41px;
+        letter-spacing: 2px;
+        line-height: 115%;
+    }
+    main #homeMainUp #homeMainUpContainer #homeMainUpFirst #txtSide #homeIntroTitle p{
+        font-size: 25px;
+        margin: 20px 0 0 0;
+        letter-spacing: 1px;
+        line-height: 120%;
+    }
+    main #homeMainUp #homeMainUpContainer #homeMainUpFirst #txtSide #homeIntroServices{
+        justify-content: space-between;
+        margin-top: 25px;
+    }
+    main #homeMainUp #homeMainUpContainer #homeMainUpFirst #txtSide #homeIntroServices p{
+        margin:  0 0 0 10px;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 1px;
+    }
+    main #homeMainUp #homeMainUpContainer #homeMainUpFirst #txtSide #homeIntroServices div span svg{
+        height: 25px;
+    }
+    main #homeMainUp #homeMainUpContainer #homeMainUpSecond #txtSide,
+    main #homeMainUp #homeMainUpContainer #homeMainUpThird #txtSide{
+        padding: 0 ;
+    }
+    main #homeMainUp #homeMainUpContainer #homeMainUpSecond #imgSide{
+    }
+    main #homeMainUp #homeMainUpContainer #homeMainUpSecond #imgSide img{
+        height: 230px;
+    }
+    main #homeMainUp #homeMainUpContainer #homeMainUpSecond #txtSide{
+        margin: 0 70px 0 0 ;
+    }
+    main #homeMainUp #homeMainUpContainer #homeMainUpSecond #txtSide p{
+        font-size: 25px;
+        margin: 20px 0 0 0;
+        letter-spacing: 1px;
+        line-height: 120%;
+    }
+    main #homeMainUp #homeMainUpContainer #homeMainUpThird #imgSide img{
+        height: 230px;
+    }
+    main #homeMainUp #homeMainUpContainer #homeMainUpThird #txtSide{
+        margin: 0 45px 0 0 ;
+    }
+    main #homeMainUp #homeMainUpContainer #homeMainUpThird #txtSide p{
+        font-size: 25px;
+        margin: 30px 0 0 0;
+        letter-spacing: 1px;
+        line-height: 120%;
+    }
+    main #homeMainUp #homeMainUpContainer #homeMainUpThird #txtSide a {
+        margin-top: 17px;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        color: #B28CFF;
+    }
+    main #homeMainUp #homeMainUpContainer #homeMainUpThird #txtSide a p{
+        font-size: 22px;
+        line-height: 100%;
+    }
+    main #homeMainUp #homeMainUpContainer #homeMainUpThird #txtSide a svg{
+        width: 13px;
+    }
+    main #homeMainUp #homeMainUpContainer .carousel-indicators{
+        margin-bottom: 35px;
+    }
+    main #homeMainUp #homeMainUpContainer .carousel-indicators li{
+        width: 40px;
+        height: 4px;
+        border-radius: 100px;
+        border: 7px solid transparent;
+        margin: 0 2px;
+    }
+    main #homeMainUp #homeMainUpContainer #homeMainUpTrigger{
+        text-align: center;
+    }
+    main #homeMainMiddle{
+        margin: 100px 0 0 0;
+    }
+    main #homeMainMiddle #titleSide hr{
+        height: 2px;
+    }
+    /*course card*/
+    main #homeMainMiddle #coursesSide{
+        grid-template-columns: repeat(auto-fit, minmax(297px, 1fr));
+        grid-template-columns: 297px 297px 297px;
+        justify-items: left;
+    }
+    main #homeMainMiddle #coursesSide #courseCard{
+        width: 297px;
+    }
+    main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardHead #courseCardLocation{
+        padding-left:  30px;
+    }
+    main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardHead #courseCardLocation svg{
+        width: 19px;
+    }
+    main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardHead #courseCardLocation p{
+        font-size: 22px;
+        margin: 0 0 0 10px;
+    }
+    main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardBody {
+        padding: 15px 30px 0 30px;
+    }
+    main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardBody #courseCardTitle #courseName{
+        font-size: 38px;
+        line-height: 40px;
+    }
+    main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardBody #courseCardServices{
+        margin-top: 15px;
+        max-height: 80px;
+    }
+    main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardBody #courseCardServices div p{
+        font-size: 19px;
+        border-radius: 11px;
+        padding: 4px 6px;
+        margin: 0 3px 7px 0;
+    }
+    main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardFooter{
+        padding: 0 30px 30px 30px;
+        margin-top: 15px;
+    }
+    main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardFooter #courseCardPrice p{
+        font-size: 27px;
+    }
+    main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardFooter #courseCardBtn svg{
+        width:30px;
+    }
+    /*course cards*/
+    /*home-page*/
+    /*course-page*/
+    main #courseMain {
+        padding: 0;
+        margin-top: 20px;
+    }
+    main #courseMain #courseMainHead{
+        flex-direction: row-reverse;
+    }
+    main #courseMain #courseMainHead #titleSide{
+        padding: 0 0 0 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    main #courseMain #courseMainHead #titleSide #courseName p{
+        font-size: 70px;
+        letter-spacing: 2px;
+    }
+    main #courseMain #courseMainHead #titleSide #coursePrice{
+        margin-top:0;
+    }
+    main #courseMain #courseMainHead #titleSide #coursePrice svg{
+        height: 38px;
+    }
+    main #courseMain #courseMainHead #titleSide #coursePrice p{
+        line-height: 100%;
+        font-size: 32px;
+        margin: 0 0 0 20px;
+    }
+    main #courseMain #courseMainHead #imgSide{
+        margin: 0;
+    }
+    main #courseMain #courseMainBody{
+        margin-top: 40px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout{
+        padding: 0 40px 0 0 ;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseMainAboutFirstContainer{
+        border-radius: 25px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseMainAboutSecondContainer{
+        padding: 35px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseCity p{
+        font-weight: normal;
+        margin: 0 0 0 15px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseLocation ::-webkit-scrollbar {
+        display: block;
+        width: 8px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseLocation ::-webkit-scrollbar-track {
+        background-color: rgba(112,112,112,.2);
+        margin: 15px 0;
+        border-radius: 100px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseLocation ::-webkit-scrollbar-thumb {
+        border-radius: 100px;
+        background-clip: content-box;
+        background-color: rgba(112,112,112,.7);
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseLocation ::-webkit-scrollbar-thumb:hover {
+        background-color: #707070;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseLocation #courseLocationContainer #courseLocationContainerBox{
+        padding:  15px 15px 15px 15px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseLocation #courseLocationContainer div{
+        margin-bottom: 10px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseLocation #courseLocationContainer div:last-child{
+        margin-bottom: 0;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseLocation #courseLocationContainer div a{
+        padding: 12px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseLocation #courseLocationContainer div a:hover {
+         text-decoration: underline;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseLocation #courseLocationContainer div a svg{
+        width: 13px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseLocation #courseLocationContainer div a p{
+        font-size: 15px;
+        line-height: 1.2;
+        padding-left: 15px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseNumber{
+        margin-top: 25px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseNumber #courseNumbers{
+        margin-left: 15px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseNumber #courseNumbers #numbersDropdownTrigger{
+        cursor: pointer;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseSchedule{
+        margin-top: 20px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseSchedule #courseSchedules{
+        margin-left:15px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseSchedule #courseSchedules #scheduleDropdownTrigger{
+        cursor: pointer;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseSchedule #courseSchedules #scheduleDropdownTrigger div p{
+        font-weight: normal;
+        margin-top: 5px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseSchedule #courseSchedules #scheduleDropdownTrigger svg{
+        margin:0 0 0 15px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseSchedule #courseSchedules #schedulesDropdownMenu #schedulesDropdownMenuContainer #days{
+        margin-right: 15px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseEmail{
+        margin-top: 25px;
+        align-items: center;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseEmail p{
+        margin: 0 0 0 15px;
+        font-size: 21px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseWebsite{
+        margin-top: 25px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseWebsite svg{
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseWebsite p{
+        margin: 0 0 0 15px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseFacebook{
+        margin-top: 25px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseFacebook p{
+        margin: 0 0 0 15px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseInstagram{
+        margin-top: 25px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseInstagram p{
+        margin: 0 0 0 15px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseInfo{
+        margin-top: 23px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseInfo svg{
+        margin-top: 2px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseInfo p{
+        font-size: 22px;
+        margin-left: 15px;
+        max-width: 270px;
+        letter-spacing: 1px;
+        line-height: 140%;
+    }
+    main #courseMain #courseMainBody #courseMainContent{
+        padding: 0;
+    }
+    main #courseMain #courseMainBody #courseMainContent #contentBody{
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(279px, 1fr));
+        grid-gap:20px;
+        justify-items: left;
+    }
+    main #courseMain #courseMainBody #courseMainContent #contentBody #courseService{
+        width: 279px;
+        margin: 0;
+    }
+    main #courseMain #courseMainBody #courseMainContent #contentBody #courseService #courseServiceContainer p{
+        font-size: 35px;
+    }
+    main #courseMain #courseMainBody #courseMainContent #contentBody #courseService:nth-child(1) #courseServiceContainer svg,
+    main #courseMain #courseMainBody #courseMainContent #contentBody #courseService:nth-child(8) #courseServiceContainer svg{
+        color: #87A8FF;
+    }
+    main #courseMain #courseMainBody #courseMainContent #contentBody #courseService:nth-child(2) #courseServiceContainer svg,
+    main #courseMain #courseMainBody #courseMainContent #contentBody #courseService:nth-child(7) #courseServiceContainer svg{
+        color: #FE6B86;
+    }
+    main #courseMain #courseMainBody #courseMainContent #contentBody #courseService:nth-child(4) #courseServiceContainer svg,
+    main #courseMain #courseMainBody #courseMainContent #contentBody #courseService:nth-child(9) #courseServiceContainer svg{
+        color: #7E5DED;
+    }
+    main #courseMain #courseMainBody #courseMainContent #contentBody #courseService:nth-child(3) #courseServiceContainer svg,
+    main #courseMain #courseMainBody #courseMainContent #contentBody #courseService:nth-child(10) #courseServiceContainer svg{
+        color: #45EC9C;
+    }
+    main #courseMain #courseMainBody #courseMainContent #contentBody #courseService:nth-child(5) #courseServiceContainer svg,
+    main #courseMain #courseMainBody #courseMainContent #contentBody #courseService:nth-child(12) #courseServiceContainer svg{
+        color: #63B4FC;
+    }
+    main #courseMain #courseMainBody #courseMainContent #contentBody #courseService:nth-child(6) #courseServiceContainer svg,
+    main #courseMain #courseMainBody #courseMainContent #contentBody #courseService:nth-child(11) #courseServiceContainer svg{
+        color: #FF8F54;
+    }
+    /*course-page*/
+    /*contact-page*/
+    #contactMain{
+        margin-top: 20px;
+        height: 88vh;
+        padding: 0;
+    }
+    #contactMain #contactMainUp{
+        border-radius: 30px ;
+    }
+    #contactMain #contactMainUp #contactMainUpContainer{
+        padding: 50px 90px;
+    }
+    #contactMain #contactMainUp #contactMainUpContainer #txtSide{
+        padding: 0;
+        display: flex;
+        align-items: center;
+        text-align: left;
+    }
+    #contactMain #contactMainUp #contactMainUpContainer #txtSide p{
+        font-size:25px;
+        line-height:1.2;
+        letter-spacing:1px;
+        margin: 0;
+    }
+    #contactMain #contactMainUp #contactMainUpContainer #imgSide{
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    #contactMain #contactMainUp #contactMainUpContainer #imgSide img{
+        width: 95%;
+    }
+    #contactMain #contactMainMiddle{
+        margin: 20px 0 0 0;
+    }
+    #contactMain #contactMainMiddle #contactMainMiddleContainer div a p{
+        font-size: 27px;
+        letter-spacing:1px;
+    }
+    #contactMain #contactMainMiddle #contactMainMiddleContainer div a span svg{
+        width: 50px;
+    }
+    #contactMain #contactMainMiddle #contactMainMiddleContainer div #contactEmailContainer{
+        margin: 0 14px 0 0;
+        border-radius: 30px 30px 0 0 ;
+    }
+    #contactMain #contactMainMiddle #contactMainMiddleContainer div #contactFacebookContainer{
+        margin: 0 6px 0 6px;
+        border-radius: 30px 30px 0 0 ;
+    }
+    #contactMain #contactMainMiddle #contactMainMiddleContainer div #contactInstagramContainer{
+        margin: 0 0 0 14px;
+        border-radius: 30px 30px 0 0 ;
+    }
+    #contactMain #contactMainMiddle #contactMainMiddleContainer div div div{
+        padding:70px 0;
+    }
+    /*contact-page*/
+    /*footer*/
+    footer #footerMain{
+        padding: 0;
+    }
+    footer #footerMain #footerMainContainer{
+        padding: 45px 20px;
+    }
+    footer #footerMain #footerMainEmail svg{
+        width: 30px;
+        margin-right: 15px;
+    }
+    footer #footerMain #footerMainEmail p{
+        font-size: 25px;
+    }
+    footer #footerMain #footerMainSocialMedia svg{
+        width: 30px;
+        margin-left: 20px;
+        transition: all .2s ease-in-out;
+    }
+    footer #footerMain #footerMainSocialMedia svg:hover{
+        color: #523F74;
+        transform:scale(1.3);
+    }
+    /*footer*/
+    /*404*/
+    #main404Container {
+        top: 45%;
+    }
+    #main404 #main404Svg svg {
+        width: 300px;
+    }
+    #main404 #main404Tittle {
+        margin: 50px 0 0 0;
+    }
+    #main404 #main404Tittle h1 {
+        font-size: 33px;
+    }
+    #main404 #main404Link {
+        margin-top: 32px;
+    }
+    #main404 #main404Link p {
+        font-size: 27px;
+    }
+    #main404 #main404Link svg {
+        width: 17px;
+    }
+    /*404*/
+}
+@media only screen and (min-width: 1025px) {
+    #courseBackgroundN {
+        background-image: url("../images/logo/nLogoPurple.png");
+        background-repeat: no-repeat;
+        background-size: 75vmin;
+        background-position: 102% 15%;
+    }
+    #contactBackgroundN {
+        background-image: url("../images/logo/nLogoPurple.png");
+        background-repeat: no-repeat;
+        background-size: 60vmin;
+        background-position: 103% 1%;
+    }
+    #homeBackgroundN{
+        background-image: url("../images/logo/nLogoPurple.png");
+        background-repeat: no-repeat;
+        background-size: 60vmin;
+        background-position: 103% 0;
+    }
+}
+@media only screen and (min-width: 1367px) {
+    .container{
+        max-width: 1200px;
+    }
+    /*navbar*/
+    header #mainNav{
+        max-width: 1500px;
+    }
+    header #mainNav #mainNavLogo img{
+        width: 110px;
+    }
+    header #mainNav #mainNavLarge #mainNavLargeLinks p{
+        margin: 0 0 0 65px;
+    }
+    header #mainNav #mainNavLarge #mainNavLargeLinks p a{
+        font-size: 30px;
+    }
+    header #mainNav #mainNavLarge #mainNavLargeLinks #active{
+        font-size: 35px;
+    }
+    /*navbar*/
+    /*home-page*/
+    main #homeMain{
+        margin-top: 30px;
+    }
+    main #homeMainUp{
+        height: 700px;
+    }
+    main #homeMainUp #homeMainUpContainer{
+        padding: 120px 120px 0 120px;
+    }
+    main #homeMainUp #homeMainUpContainer #homeMainUpContentCarousel{
+        height: 450px;
+    }
+    main #homeMainUp #homeMainUpContainer #homeMainUpFirst #imgSide{
+        text-align: center;
+    }
+    main #homeMainUp #homeMainUpContainer #homeMainUpFirst #imgSide img{
+        height: 290px
+    }
+    main #homeMainUp #homeMainUpContainer  #homeMainUpFirst #txtSide{
+        margin: 0 115px 0 0;
+    }
+    main #homeMainUp #homeMainUpContainer  #homeMainUpFirst #txtSide #homeIntroTitle h1{
+        font-size: 51px;
+        line-height: 115%;
+        letter-spacing: 2px;
+    }
+    main #homeMainUp #homeMainUpContainer #homeMainUpFirst #txtSide #homeIntroTitle p{
+        font-size: 30px;
+        margin: 30px 0 0 0;
+        line-height: 120%;
+    }
+    main #homeMainUp #homeMainUpContainer #homeMainUpFirst #txtSide #homeIntroServices{
+        margin-top: 30px;
+    }
+    main #homeMainUp #homeMainUpContainer #homeMainUpFirst #txtSide #homeIntroServices p{
+        margin:  0 0 0 15px;
+        font-size: 25px;
+    }
+    main #homeMainUp #homeMainUpContainer #homeMainUpFirst #txtSide #homeIntroServices div span svg{
+        height: 29px;
+    }
+    main #homeMainUp #homeMainUpContainer #homeMainUpSecond #imgSide{
+        text-align: center;
+    }
+    main #homeMainUp #homeMainUpContainer #homeMainUpSecond #imgSide img{
+        height: 290px;
+    }
+    main #homeMainUp #homeMainUpContainer #homeMainUpSecond #txtSide{
+        margin: 0 90px 0 0 ;
+    }
+    main #homeMainUp #homeMainUpContainer #homeMainUpSecond #txtSide p{
+        font-size: 30px;
+        line-height: 120%;
+    }
+    main #homeMainUp #homeMainUpContainer #homeMainUpThird #imgSide{
+        text-align: center;
+    }
+    main #homeMainUp #homeMainUpContainer #homeMainUpThird #imgSide img{
+        height: 290px;
+    }
+    main #homeMainUp #homeMainUpContainer #homeMainUpThird #txtSide{
+        margin: 0 100px 0 0 ;
+    }
+    main #homeMainUp #homeMainUpContainer #homeMainUpThird #txtSide p{
+        font-size: 30px;
+        line-height: 120%;
+        margin: 35px 0 0 0;
+    }
+    main #homeMainUp #homeMainUpContainer #homeMainUpThird #txtSide a p{
+        font-size: 28px;
+    }
+    main #homeMainUp #homeMainUpContainer #homeMainUpThird #txtSide a svg{
+        width: 17px;
+    }
+    main #homeMainUp #homeMainUpContainer .carousel-indicators{
+        margin-bottom: 65px;
+    }
+    main #homeMainUp #homeMainUpContainer .carousel-indicators li{
+        width: 47px;
+        height: 5px;
+        border: 8px solid transparent;
+        margin: 0 3px;
+    }
+    main #homeMainUp #homeMainUpContainer #homeMainUpTrigger #ball{
+        width: 36px;
+    }
+    main #homeMainMiddle{
+        margin: 130px 0 0 0;
+    }
+    main #homeMainMiddle #titleSide h1{
+        font-size: 50px;
+    }
+    main #homeMainMiddle #titleSide hr{
+        width: 40%;
+        height: 2px;
+        margin-bottom: 70px;
+    }
+    /*course card*/
+    main #homeMainMiddle #coursesSide{
+        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+        grid-template-columns: 360px 360px 360px;
+        grid-gap: 60px;
+    }
+    main #homeMainMiddle #coursesSide #courseCard{
+        width: 360px;
+    }
+    main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardHead #courseCardLocation{
+        padding-left: 35px;
+    }
+    main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardHead #courseCardLocation svg{
+        width: 22px;
+    }
+    main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardHead #courseCardLocation p{
+        font-size: 23px;
+        margin-left: 13px;
+    }
+    main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardBody {
+        padding: 20px 35px 0 35px;
+    }
+    main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardBody #courseCardTitle #courseName{
+        font-size: 46px;
+        line-height: 45px;
+    }
+    main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardBody #courseCardServices{
+        margin-top: 20px;
+        max-height: 95px;
+    }
+    main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardBody #courseCardServices div p{
+        padding:5px 7px;
+        font-size: 22px;
+        border-radius: 14px;
+        margin: 0 3px 7px 0;
+    }
+    main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardFooter{
+        padding: 0 35px 35px 35px;
+        margin-top: 20px;
+    }
+    main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardFooter #courseCardPrice p{
+        font-size: 30px;
+    }
+    main #homeMainMiddle #coursesSide #courseCard #courseCardContainer #courseCardFooter #courseCardBtn svg{
+        width:32px;
+    }
+    /*course cards*/
+    /*home-page*/
+    /*course-page*/
+    main #courseMain {
+        margin-top: 30px;
+    }
+    main #courseMain #courseMainHead #titleSide{
+        padding: 0 0 0 60px;
+    }
+    main #courseMain #courseMainHead #titleSide #courseName p{
+        font-size: 80px;
+        letter-spacing: 2px;
+    }
+    main #courseMain #courseMainHead #titleSide #coursePrice svg{
+        height: 45px;
+    }
+    main #courseMain #courseMainHead #titleSide #coursePrice p{
+        font-size: 35px;
+    }
+    main #courseMain #courseMainBody{
+        margin-top: 60px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseMainAboutSecondContainer{
+        padding: 35px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseCity svg{
+        width: 25px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseCity p{
+        font-size: 27px;
+        margin: 0 0 0 20px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseLocation{
+        height: 180px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseLocation ::-webkit-scrollbar-track {
+        margin: 20px 0;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseLocation #courseLocationContainer #courseLocationContainerBox{
+        padding:  20px 20px 20px 20px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseLocation #courseLocationContainer div a{
+        padding: 15px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseLocation #courseLocationContainer div a svg{
+        width: 15px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseLocation #courseLocationContainer div a p{
+        font-size: 17px;
+        padding-left: 15px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseNumber{
+        margin-top: 30px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseNumber svg{
+        width: 25px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseNumber #courseNumbers{
+        margin-left: 20px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseNumber #courseNumbers #numbersDropdownTrigger #numberContainer #numberLocation p{
+        font-size: 22px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseNumber #courseNumbers #numbersDropdownTrigger #numberContainer #number p{
+        font-size: 27px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseNumber #courseNumbers #numbersDropdownTrigger #dropdownNumbersBtn svg{
+        width: 27px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseNumber #courseNumbers #numbersDropdownMenu #numbersDropdownMenuContainer{
+        padding: 20px 20px 0 20px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseNumber #courseNumbers #numbersDropdownMenu #numbersDropdownMenuContainer #numberLocation{
+        font-size: 25px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseNumber #courseNumbers #numbersDropdownMenu #numbersDropdownMenuContainer #number{
+        font-size: 25px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseSchedule{
+        margin-top: 30px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseSchedule svg{
+        width: 25px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseSchedule #courseSchedules{
+        margin-left: 20px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseSchedule #courseSchedules #scheduleDropdownTrigger div p{
+        font-size: 27px;
+        margin-top: 3px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseSchedule #courseSchedules #scheduleDropdownTrigger svg{
+        width: 27px;
+        margin:0 0 0 18px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseSchedule #courseSchedules #schedulesDropdownMenu #schedulesDropdownMenuContainer{
+        padding: 20px 20px 0 20px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseSchedule #courseSchedules #schedulesDropdownMenu #schedulesDropdownMenuContainer #days{
+        margin-right: 15px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseSchedule #courseSchedules #schedulesDropdownMenu #schedulesDropdownMenuContainer #days p{
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseSchedule #courseSchedules #schedulesDropdownMenu #schedulesDropdownMenuContainer #schedules p{
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseEmail{
+        margin-top: 30px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseEmail svg{
+        width: 25px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseEmail p{
+        font-size: 27px;
+        margin: 0 0 0 20px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseWebsite{
+        margin-top: 30px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseWebsite svg{
+        width: 25px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseWebsite p{
+        font-size: 27px;
+        margin: 0 0 0 20px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseFacebook{
+        margin-top: 30px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseFacebook svg{
+        width: 25px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseFacebook p{
+        font-size: 27px;
+        margin: 0 0 0 20px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseInstagram{
+        margin-top: 30px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseInstagram svg{
+        width: 25px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseInstagram p{
+        font-size: 27px;
+        margin: 0 0 0 20px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseInfo{
+        margin-top: 26px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseInfo svg{
+        width: 25px;
+        margin-top: 4px;
+    }
+    main #courseMain #courseMainBody #courseMainAbout #courseInfo p{
+        font-size: 25px;
+        margin-left: 20px;
+        max-width: 340px;
+        letter-spacing: 1px;
+    }
+    main #courseMain #courseMainBody #courseMainContent #contentTitle p{
+        font-size: 32px;
+    }
+    main #courseMain #courseMainBody #courseMainContent #contentBody{
+        margin-top: 40px;
+        grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+        grid-gap:40px;
+    }
+    main #courseMain #courseMainBody #courseMainContent #contentBody #courseService{
+        width: 330px;
+    }
+    main #courseMain #courseMainBody #courseMainContent #contentBody #courseService #courseServiceContainer svg{
+        width: 52px;
+    }
+    main #courseMain #courseMainBody #courseMainContent #contentBody #courseService #courseServiceContainer p{
+        font-size: 37px;
+    }
+    /*course-page*/
+    /*contact-page*/
+    #contactMain{
+        margin-top: 30px;
+        height: 90vh;
+    }
+    #contactMain #contactMainMiddle #contactMainMiddleContainer div div div{
+        padding:100px 0;
+    }
+    /*contact-page*/
+    /*footer*/
+    footer #footerMain #footerMainContainer{
+        padding: 50px 20px;
+    }
+    footer #footerMain #footerMainEmail svg{
+        width: 35px;
+    }
+    footer #footerMain #footerMainEmail p{
+        font-size: 30px;
+    }
+    footer #footerMain #footerMainSocialMedia svg{
+        width: 35px;
+    }
+    /*footer*/
+}
